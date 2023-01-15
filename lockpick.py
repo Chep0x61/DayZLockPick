@@ -2,8 +2,8 @@ from array import *
 import ctypes
 import time
 
-# https://web.archive.org/web/20190801085838/http://www.gamespp.com/directx/directInputKeyboardScanCodes.html
-AwesomeKey = 0x21
+AwesomeKey = 0x21 #Your Dayz Interact Key Here (https://web.archive.org/web/20190801085838/http://www.gamespp.com/directx/directInputKeyboardScanCodes.html)
+TimeBeforeStart = 4
 
 SendInput = ctypes.windll.user32.SendInput
 
@@ -108,8 +108,8 @@ def SwitchRow(pwd):
 
 if __name__ == '__main__':
     pwd = array('i', [0, 0, 0, 0])
-    time.sleep(4)
-    while True:
+    time.sleep(TimeBeforeStart)
+    while pwd[0] != 9 and pwd[1] != 9 and pwd[2] != 9:
         PressKey(AwesomeKey)
         time.sleep(6.25)
         ReleaseKey(AwesomeKey)
