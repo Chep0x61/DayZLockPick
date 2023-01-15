@@ -20,9 +20,18 @@
 
 #### Make sure to have [Python](https://www.python.org/downloads/) installed on your computer.
 
-<br />
+### In case of it's needed
+#### In a text editor you can edit the [hex value](https://web.archive.org/web/20190801085838/http://www.gamespp.com/directx/directInputKeyboardScanCodes.html) of your interact key in Dayz in `lockpick.py`. 
+- By Default key is `F`
 
-#### Then you can run the project :
+### Then in DayZ after finding a hidden combination lock :
+
+- Put your last cursor on the last slot.
+- Reset this last slot to 0.
+
+<img src="https://github.com/Chep0x61/DayZLockPick/blob/main/.github/assets/combinationlock.jpg?raw=true" /> 
+
+### Finally you can run the project :
 
 ```bash
 python lockpick.py
