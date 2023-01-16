@@ -26,7 +26,7 @@
 
 ### Then in DayZ after finding a hidden combination lock :
 
-- Put your last cursor on the last slot.
+- Put your cursor on the last slot.
 - Reset this last slot to 0.
 
 <img src="https://github.com/Chep0x61/DayZLockPick/blob/main/.github/assets/combinationlock.jpg?raw=true" /> 
