@@ -24,7 +24,7 @@
 #### In a text editor you can edit `AwesomeKey` and `TimeBeforeStart` vars in `lockpick.py`.
 
 `AwesomeKey` must be the [hex value](https://web.archive.org/web/20190801085838/http://www.gamespp.com/directx/directInputKeyboardScanCodes.html) of your interact key in Dayz. 
-- By Default key is `F`
+- By Default key is `F`.
 
 `TimeBeforeStart` is the time in seconds before starting emulate your keyboard.
 - By Default the value is `4` seconds.
