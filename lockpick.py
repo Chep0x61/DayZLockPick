@@ -109,7 +109,7 @@ def SwitchRow(pwd):
 if __name__ == '__main__':
     pwd = array('i', [0, 0, 0, 0])
     time.sleep(TimeBeforeStart)
-    while pwd[0] != 9 and pwd[1] != 9 and pwd[2] != 9:
+    while True:
         PressKey(AwesomeKey)
         time.sleep(6.25)
         ReleaseKey(AwesomeKey)
