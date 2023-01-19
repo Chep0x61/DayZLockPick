@@ -21,10 +21,13 @@
 #### Make sure to have [Python](https://www.python.org/downloads/) installed on your computer.
 
 ### Config
-#### In a text editor you can edit `AwesomeKey` and `TimeBeforeStart` vars in `lockpick.py`.
+#### In a text editor you can edit `AwesomeKey`, `SecretCode`and `TimeBeforeStart` vars in `lockpick.py`.
 
 `AwesomeKey` must be the [hex value](https://web.archive.org/web/20190801085838/http://www.gamespp.com/directx/directInputKeyboardScanCodes.html) of your interact key in Dayz. 
 - By Default key is `F`.
+
+`SecretCode` must be your current combination lock's code in game. Last digit must be a `0`.
+- By Default secret code is `0000`
 
 `TimeBeforeStart` is the time in seconds before starting emulate your keyboard.
 - By Default the value is `4` seconds.
