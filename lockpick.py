@@ -4,6 +4,7 @@ import time
 
 AwesomeKey = 0x21 #Your Dayz Interact Key Here (https://web.archive.org/web/20190801085838/http://www.gamespp.com/directx/directInputKeyboardScanCodes.html)
 TimeBeforeStart = 4
+SecretCode = array('i', [0, 0, 0, 0])
 
 SendInput = ctypes.windll.user32.SendInput
 
@@ -71,18 +72,18 @@ def NextRow():
     ReleaseKey(AwesomeKey)
     time.sleep(0.2)
 
-def SwitchRow(pwd):
+def SwitchRow(SecretCode):
     i = 0
-    if pwd[1] == 9 and pwd[2] == 9 and pwd[3] == 9:
+    if SecretCode[1] == 9 and SecretCode[2] == 9 and SecretCode[3] == 9:
         time.sleep(0.4)
         for i in range(3):
             NextRow()
             IncrementLock()
         NextRow()
-        pwd[0] += 1
-        pwd[1] = 0
-        pwd[2] = 0
-    elif pwd[2] == 9 and pwd[3] == 9:
+        SecretCode[0] += 1
+        SecretCode[1] = 0
+        SecretCode[2] = 0
+    elif SecretCode[2] == 9 and SecretCode[3] == 9:
         time.sleep(0.4)
         for i in range(2):
             NextRow()
@@ -90,29 +91,28 @@ def SwitchRow(pwd):
         NextRow()
         IncrementLock()
         NextRow()
-        pwd[1] += 1
-        pwd[2] += 1
-        if pwd[2] == 10:
-            pwd[2] = 0
-    elif pwd[3] == 9:
+        SecretCode[1] += 1
+        SecretCode[2] += 1
+        if SecretCode[2] == 10:
+            SecretCode[2] = 0
+    elif SecretCode[3] == 9:
         time.sleep(0.4)
         for i in range(3):
             NextRow()
         IncrementLock()
         NextRow()
-        pwd[2] += 1
-        if pwd[2] == 10:
-            pwd[2] = 0
-    pwd[3] = 0
-    return (pwd)
+        SecretCode[2] += 1
+        if SecretCode[2] == 10:
+            SecretCode[2] = 0
+    SecretCode[3] = 0
+    return (SecretCode)
 
 if __name__ == '__main__':
-    pwd = array('i', [0, 0, 0, 0])
     time.sleep(TimeBeforeStart)
     while True:
         PressKey(AwesomeKey)
         time.sleep(6.25)
         ReleaseKey(AwesomeKey)
         time.sleep(0.2)
-        pwd[3] = 9
-        pwd = SwitchRow(pwd)
+        SecretCode[3] = 9
+        SecretCode = SwitchRow(SecretCode)
